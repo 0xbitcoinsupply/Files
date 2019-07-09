@@ -6,7 +6,7 @@ require "./db"
 set(:port, 8000)
 get "/" do
   @shirts = 1
-  @price = 0.0177233
+  @price = 0.000777233
   @total = @price * @shirts
   haml :index
 end
