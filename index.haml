@@ -2,17 +2,22 @@
 - @body_id = "demo"
 #ewrap
   #explanation
-    %h2 Gold coins for 0xBitcoin
-    %p This is a test shop to sell a Gold Coin
+    %h2 Demo
+    %p This is a demo of a web shop with a 0xBitcoin checkout process powered by <strong>0xBTCpay</strong>.
+    %p You can refresh the page to get a random cart.
     %p Click the <code>Pay with 0xBitcoin</code> button to create your order and pay.
 %h2 Your cart
 %ul
   - @shirts.times do |i|
     %li
-      %img(src="https://raw.githubusercontent.com/0xbitcoinsupply/Files/master/2tlaYba.jpg")
-      Austrian 4 ducats ##{i+1}: #{@price} 0xBTC
+      %img(src="/0xbitcoin.svg")
+      Spicy meme ##{i+1}: #{@price} 0xBTC
 %h2 Total: #{@total} 0xBTC
 %p Pay now to receive your spicy memes.
 %form(method="post")
   %input#very_secure(name="total" type="hidden" value=@total)
+  %button Pay now with 0xBitcoin
+  
+ %form(method="post")
+  %input#very_secure(name="total" type="hidden" value=@total*2)
   %button Pay now with 0xBitcoin
