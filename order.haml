@@ -1,0 +1,22 @@
+- @title = "Order #{@order.id}"
+- @body_id = "order"
+%table
+  %body
+    %tr
+      %th Amount
+      %td= @order.amount.to_s("F") + " 0xBTC"
+    %tr
+      %th Placed at
+      %td= @order.created_at
+    %tr
+      %th Paid at
+      %td= @order.paid_at
+    %tr
+      %th Ethereum txn
+      %td
+        %a(href="https://etherscan.io/tx/#{@order.tx_hash}")= @order.tx_hash
+%p ✅ Order paid via 0xBTCpay
+%h2 Will Ship to your address
+#memes
+    %img(src="https://i.imgur.com/2tlaYba.jpg")
+%p Please provide shipping address
