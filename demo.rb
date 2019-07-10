@@ -5,11 +5,13 @@ require "securerandom"
 require "./db"
 set(:port, 8000)
 get "/" do
-  @shirts = 1
-  @coins = 3
-  @price = 0.005
+  @shirts = 25000
+  @coins = 22500
+  @price = 0.01
+  @Titty = 0.015
   @total = @price * @shirts
   @total2 = @price * @coins
+  @total3 = @price * @Titty
   haml :index
 end
 post "/" do
