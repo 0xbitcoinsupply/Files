@@ -2,22 +2,104 @@
 - @body_id = "demo"
 #ewrap
   #explanation
-    %h2 Demo
-    %p This is a demo of a web shop with a 0xBitcoin checkout process powered by <strong>0xBTCpay</strong>.
-    %p You can refresh the page to get a random cart.
+    %p Welcome to my new 0xBitcoin Shop, Shipping is from the USA. If ordering International please also buy the international shipping option near the bottom.
+    %p To buy use the trust wallet, metamask wallet, scan the QR code, or simply pay the ethereum address with the correct amount!
     %p Click the <code>Pay with 0xBitcoin</code> button to create your order and pay.
-%h2 Your cart
-%ul
-  - @shirts.times do |i|
-    %li
-      %img(src="/0xbitcoin.svg")
-      Spicy meme ##{i+1}: #{@price} 0xBTC
-%h2 Total: #{@total} 0xBTC
-%p Pay now to receive your spicy memes.
+    %p Thank you!
+%p
+%p
+%p
+#Mint
+%h2 Unscratched Dodger Card
+%img(src="https://raw.githubusercontent.com/0xbitcoinsupply/Files/master/s-l1600.jpg" style="max-height: 200px; max-wdith: 200px;")
+%img(src="https://raw.githubusercontent.com/0xbitcoinsupply/Files/master/CBDodgers_CardBack_CardID.png" style="max-height: 200px; max-wdith: 200px;")
+%h2
+%h2 <a href="https://www.trustnodes.com/2018/09/22/dodgers-gives-out-thousands-of-tokenized-baseball-cards-and-ethereum-wallets" target="_blank"> Link to Article about the ERC-721 Cards</a>
+%p Pay now to recieve your unscratched MLB Dodger Crypto Token Card, Great condition
+%h2 Quantity Left: #{@qMint}
+%h2 Total: #{@total1} 0xBTC
 %form(method="post")
-  %input#very_secure(name="total" type="hidden" value=@total)
-  %button Pay now with 0xBitcoin
-  
- %form(method="post")
-  %input#very_secure(name="total" type="hidden" value=@total*2)
-  %button Pay now with 0xBitcoin
+  %input#very_secure(name="total" type="hidden" value=@total1)
+  %button #{@gMint}
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+#AlmostMint
+%h2 Good Quality Dodger Card
+%img(src="https://raw.githubusercontent.com/0xbitcoinsupply/Files/master/s-l1600.jpg" style="max-height: 200px; max-wdith: 200px;")
+%img(src="https://raw.githubusercontent.com/0xbitcoinsupply/Files/master/CBDodgers_CardBack_CardID.png" style="max-height: 200px; max-wdith: 200px;")
+%h2 <a href="https://www.trustnodes.com/2018/09/22/dodgers-gives-out-thousands-of-tokenized-baseball-cards-and-ethereum-wallets" target="_blank"> Link to Article about the ERC-721 Cards</a>
+%p Pay now to recieve your good quality MLB Dodger Crypto Token Card, marks on the scratch part of the card, nothing revealed!!! Discount!!!
+%h2 Quantity Left: #{@qAlmostMint}
+%h2 Total: #{@total2} 0xBTC
+%form(method="post")
+  %input#very_secure(name="total" type="hidden" value=@total2)
+  %button #{@gAlmost}
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+#GoldCoin
+%h2 Ungraded 1987 Gold 5$ Constitution Bicentennial Coin
+%img(src="https://raw.githubusercontent.com/0xbitcoinsupply/Files/master/1XMsLj3.jpg" style="max-height: 200px; max-wdith: 200px;")
+%h2 <a href='https://www.ngccoin.com/coin-explorer/modern-commemoratives-1982-date-pscid-73/1987-w-constitution-bicentennial-5-ms-coinid-19626' target="_blank">Check out the 1987 W CONSTITUTION BICENTENNIAL $5</a>
+%p Pay now to recieve your 1987-W Gold $5 Bicentennial Constitution Coin
+%p Contains .2419oz of Gold
+%h2 Quantity Left: #{@qGold}
+%h2 Total: #{@total4} 0xBTC
+%form(method="post")
+  %input#very_secure(name="total" type="hidden" value=@total4)
+  %button #{@gSold}
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+#international
+%h2 Pay now to have international shipping
+%h2 Total: #{@intp} 0xBTC
+%form(method="post")
+  %input#very_secure(name="total" type="hidden" value=@intp)
+  %button International Shipping Pay here
+%br
+%br
+%br
+%br
+%br
+%br
+#Fake
+  #{@nTest}
+%p Pay now to recieve your FAKE e-Card,
+%p Test Transactions to see what happens  !! No shipping Information will be asked in test transaction!
+%p Total: #{@total3} 0xBTC
+%form(method="post")
+  %input#very_secure(name="total" type="hidden" value=@total3)
+  %button #{@qSold}
+%h2 Quantity Left: #{@qTest}
+%br
+%br
+%br Discord me @ TestPhase#9193
+%br
+#ewrap
+  #explanation
+    %p Get free 0xBitcoins' at the link below
+    %p <a href="https://0xbitcoin.foundation/gas-faucet-web/"> Get Free Tokens, Only works in Chrome</a>
+    %p Then maybe go buy some memes from the creator of this software
+    %p <a href="https://demo.0xbtcpay.io/">Original store for the memes demo.0xbtcpay.io</a>
+    %p <a href="https://github.com/0xBrian/0xbtcpay">Github to make your own!</a>
+%br
+%br
