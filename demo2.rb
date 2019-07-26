@@ -6,8 +6,9 @@ require "./db"
 require "mysql2"
 set(:port, 8000)
 
-$mySQLconnect = Mysql2::Client.new(:host => "localhost", :username => "EDITTHIS", :password => "EDITTHIS");
-
+#$mySQLconnect = Mysql2::Client.new(:host => "localhost", :username => $usernameDB, :password => $passwordDB);
+$usernameDB = "CHANGE USERNAME"
+$passwordDB = "CHANGE PASSWORD"
 
 $numFloat = 0;
 $demoMultiplyer = 1;
@@ -19,8 +20,7 @@ $priceAMint= 70 * $demoMultiplyer;
 $priceMeme = 0.001;
 $international = 35 * $demoMultiplyer;
 get "/" do
-  client= $mySQLconnect
-        #client = Mysql2::Client.new(:host => "localhost", :username => "newuser2", :password => "Bobtde23f1f31cfffohornton12399")
+  client = Mysql2::Client.new(:host => "localhost", :username => $usernameDB, :password => $passwordDB)
   client.select_db('demo');
   results = client.query("SELECT * FROM product WHERE id = '4'")
   @qTest;
@@ -131,7 +131,7 @@ end
 
 post "/" do
 
-  client = $mySQLconnect
+  client = Mysql2::Client.new(:host => "localhost", :username => $usernameDB, :password => $passwordDB)
   client.select_db('demo');
   results = client.query("SELECT * FROM product WHERE id = '4'")
   @qTest;
@@ -334,7 +334,7 @@ print @flo
 @test=0.825
 @floatPrice = @flo * @test
 
-  client = $mySQLconnect
+  client = Mysql2::Client.new(:host => "localhost", :username => $usernameDB, :password => $passwordDB)
   client.select_db('demo');
   order.tx_hash = postback[:tx_hash]
   if order.amount >= ($priceMeme / @floatPrice * 0.97) && order.amount <= ($priceMeme / @floatPrice *1.03)
